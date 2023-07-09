@@ -1,0 +1,6 @@
+{
+  "python.analysis.extraPaths": [
+    "./normalizationFunctions",
+    "./enrichmentFunctions"
+  ]
+}
