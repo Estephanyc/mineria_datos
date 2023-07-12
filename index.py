@@ -32,9 +32,12 @@ def processData():
 
             #Clasificacion del medicamento //Cynthia
             clasificacion(object)
+            
 
             #Clasificacion del medicamento segun origen //Cynthia
             clasificacionOrigen(object)
+
+            print('Resultado de la clasificación de origen:', object['clasificacion_de_origen'])
 
             #Nombre cliente //Fran
             nombreCliente(object)
@@ -64,10 +67,9 @@ def processData():
             #print(object)
             
             items.append(object)
-
+            
         #Create file
         exportResults(items)
         
+        
 processData();
-
-
