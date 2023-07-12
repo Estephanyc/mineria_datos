@@ -1,7 +1,15 @@
+from api.getDirectionByRut import getDirectionByRut
+
 def direccionCliente(object):
     
-    # Acá debe quedar la direccion del cliente normalizada, esta se debe buscar en alguna base de datos externa
+    # Consultar api que trae la dirección del usuario por su rut
+    direccionCliente = getDirectionByRut(object['rut_cliente'])
     
-    object['direccion_cliente'] = 'dirección del cliente normalizada'
-    object['comuna_cliente'] = 'comuna del cliente normalizada'
-    object['ciudad_cliente'] = 'ciudad del cliente normalizada'
+    if(direccionCliente):
+        object['direccion_cliente'] = direccionCliente['direccion']
+        object['comuna_cliente'] = direccionCliente['comuna']
+        object['ciudad_cliente'] = direccionCliente['ciudad']
+    else:
+        object['direccion_cliente'] = ''
+        object['comuna_cliente'] = ''
+        object['ciudad_cliente'] = ''

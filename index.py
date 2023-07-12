@@ -27,28 +27,25 @@ def processData():
             
             # 1. Normalización
             
-            #Tipo de venta  //Fran
+            #Tipo de venta
             tipoVenta(object)
 
-            #Clasificacion del medicamento //Cynthia ok
+            #Clasificacion del medicamento
             clasificacion(object)
             
-            #Clasificacion del medicamento segun origen //Cynthia ok
+            #Clasificacion del medicamento según origen
             clasificacionOrigen(object)
 
-            #Nombre cliente //Fran
+            #Nombre cliente
             nombreCliente(object)
             
-            #Rut // Estephany ok
+            #Rut
             rut(object) 
             
-            #Direccion // Estephany ok
+            #Direccion
             direccion(object)
             
             # 2. Enriquecimiento
-            
-            # Correo cliente
-            correo(object)
 
             #Direccion del cliente
             direccionCliente(object)
@@ -59,13 +56,10 @@ def processData():
             # 4.Arbol de decisiones
             arbolDecisiones(object)
             
-            #Objecto final
-            #print(object)
-            
+            #Insertar registro en archivo           
             items.append(object)
             
         #Create file
         exportResults(items)
-        
         
 processData();

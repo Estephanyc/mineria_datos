@@ -1,8 +1,13 @@
 def tipoVenta(object):
-     # Eliminar espacios
+    # Eliminar espacios
     tipoVenta = object['tipo_venta'].strip()
-        # Convertir a minuscula
+    
+    # Eliminar puntos
+    tipoVenta = tipoVenta.replace('.', '')
+    
+    # Convertir a minúscula
     tipoVenta = tipoVenta.lower()
+    
     # Reemplazar letras con tildes
     replacements = (
         ("á", "a"),
