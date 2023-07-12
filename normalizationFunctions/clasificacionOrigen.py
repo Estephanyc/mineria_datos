@@ -3,7 +3,10 @@ def clasificacionOrigen(object):
     # Eliminar espacios
     clasificacion = object['clasificacion_de_origen'].strip()
     
-    # Convertir a minuscula
+    # Eliminar puntos
+    clasificacion = clasificacion.replace('.', '')
+    
+    # Convertir a minúscula
     clasificacion = clasificacion.lower()
 
     # Reemplazar letras con tildes

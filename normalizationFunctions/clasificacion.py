@@ -2,8 +2,11 @@ def clasificacion(object):
     
     # Eliminar espacios
     clasificacion = object['clasificacion'].strip()
-
-    # Convertir a minuscula
+    
+    # Eliminar puntos
+    clasificacion = clasificacion.replace('.', '')
+    
+    # Convertir a minúscula
     clasificacion = clasificacion.lower()
 
     # Reemplazar letras con tildes
