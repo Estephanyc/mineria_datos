@@ -1,13 +1,28 @@
 def clasificacionOrigen(object):
     
-    #Eliminar espacios
+    # Eliminar espacios
     clasificacion = object['clasificacion_de_origen'].strip()
     
-    if clasificacion == 'Marca Registrada':
+    # Convertir a minuscula
+    clasificacion = clasificacion.lower()
+
+    # Reemplazar letras con tildes
+    replacements = (
+        ("á", "a"),
+        ("é", "e"),
+        ("í", "i"),
+        ("ó", "o"),
+        ("ú", "u"),
+    )
+
+    for a, b in replacements:
+        clasificacion = clasificacion.replace(a, b)
+    
+    if clasificacion == 'marca registrada':
         object['clasificacion_de_origen'] = '1'
-    elif clasificacion == 'Generico':
+    elif clasificacion == 'generico':
         object['clasificacion_de_origen'] = '2'
-    elif clasificacion == 'Bioequivalente':
+    elif clasificacion == 'bioequivalente':
         object['clasificacion_de_origen'] = '3'
     else:
         pass
