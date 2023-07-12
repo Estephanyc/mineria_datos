@@ -1,6 +1,5 @@
 def clasificacionOrigen(object):
     
-    # Acá debe quedar la clasificacuión de origen normalizada
     if object['clasificacion_de_origen'] == 'Marca Registrada':
         object['clasificacion_de_origen'] = '1'
     elif object['clasificacion_de_origen'] == 'Generico':
@@ -10,4 +9,3 @@ def clasificacionOrigen(object):
     else:
         pass
      
-    return object

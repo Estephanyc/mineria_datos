@@ -30,22 +30,19 @@ def processData():
             #Tipo de venta  //Fran
             tipoVenta(object)
 
-            #Clasificacion del medicamento //Cynthia
+            #Clasificacion del medicamento //Cynthia ok
             clasificacion(object)
             
-
-            #Clasificacion del medicamento segun origen //Cynthia
+            #Clasificacion del medicamento segun origen //Cynthia ok
             clasificacionOrigen(object)
-
-            print('Resultado de la clasificación de origen:', object['clasificacion_de_origen'])
 
             #Nombre cliente //Fran
             nombreCliente(object)
             
-            #Rut
-            rut(object)
+            #Rut // Estephany ok
+            rut(object) 
             
-            #Direccion
+            #Direccion // Estephany ok
             direccion(object)
             
             # 2. Enriquecimiento
@@ -60,7 +57,6 @@ def processData():
             variables(object)
 
             # 4.Arbol de decisiones
-            
             arbolDecisiones(object)
             
             #Objecto final
