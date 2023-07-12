@@ -1,23 +1,38 @@
 def clasificacion(object):
     
-    #Eliminar espacios
+    # Eliminar espacios
     clasificacion = object['clasificacion'].strip()
 
-    if clasificacion == 'Ansiolitico':
+    # Convertir a minuscula
+    clasificacion = clasificacion.lower()
+
+    # Reemplazar letras con tildes
+    replacements = (
+        ("á", "a"),
+        ("é", "e"),
+        ("í", "i"),
+        ("ó", "o"),
+        ("ú", "u"),
+    )
+
+    for a, b in replacements:
+        clasificacion = clasificacion.replace(a, b)
+    
+    if clasificacion == 'ansiolitico':
         object['clasificacion'] = '1'
-    elif clasificacion == 'Antidepresivo':
+    elif clasificacion == 'antidepresivo':
         object['clasificacion'] = '2'
-    elif clasificacion == 'Sedantes hipnóticos':
+    elif clasificacion == 'sedantes hipnoticos':
         object['clasificacion'] = '3'
-    elif clasificacion == 'Antipsicóticos y neurolépticos':
+    elif clasificacion == 'antipsicoticos y neurolepticos':
         object['clasificacion'] = '4'
-    elif clasificacion == 'Estabilizadores del animo':
+    elif clasificacion == 'estabilizadores del animo':
         object['clasificacion'] = '5'
-    elif clasificacion == 'Analgesico':
+    elif clasificacion == 'analgesico':
         object['clasificacion'] = '6'
-    elif clasificacion == 'Antigripal':
+    elif clasificacion == 'antigripal':
         object['clasificacion'] = '7'
-    elif clasificacion == 'Antinflamatorio':
+    elif clasificacion == 'antinflamatorio':
         object['clasificacion'] = '8'
     else:
         pass
