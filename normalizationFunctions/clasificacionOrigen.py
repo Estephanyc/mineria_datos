@@ -1,10 +1,13 @@
 def clasificacionOrigen(object):
     
-    if object['clasificacion_de_origen'] == 'Marca Registrada':
+    #Eliminar espacios
+    clasificacion = object['clasificacion_de_origen'].strip()
+    
+    if clasificacion == 'Marca Registrada':
         object['clasificacion_de_origen'] = '1'
-    elif object['clasificacion_de_origen'] == 'Generico':
+    elif clasificacion == 'Generico':
         object['clasificacion_de_origen'] = '2'
-    elif object['clasificacion_de_origen'] == 'Bioequivalente':
+    elif clasificacion == 'Bioequivalente':
         object['clasificacion_de_origen'] = '3'
     else:
         pass
