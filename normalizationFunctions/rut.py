@@ -1,6 +1,9 @@
 def rut(object):
     currentRut = object['rut_cliente']
     
+    #Eliminar espacios
+    currentRut = currentRut.strip()
+    
     #Eliminar puntos
     currentRut  = currentRut.replace('.', '')
     
